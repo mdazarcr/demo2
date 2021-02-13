@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "firstName": "Mohammad",
+      "lastName": "Azar",
+      "email": "mdazarcr@gmail.com",
+      "city": "Bangalore",
+      "pincode": "560062",
+      "phone": "9874563210",
+      "description": "This is my description.",
+      "id": 1
+    }
+  ]
+}
