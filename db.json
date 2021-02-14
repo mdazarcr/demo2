@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "firstName": "Mohammad",
+      "lastName": "Azar",
+      "email": "mdazarcr@gmail.com",
+      "city": "Bangalore",
+      "pincode": "560062",
+      "phone": "9874563210",
+      "description": "This is my description.",
+      "id": 1
+    },
+    {
+      "firstName": "jkasdh",
+      "lastName": "jashdjh",
+      "email": "suri@gmail.com",
+      "city": "jhagsdj",
+      "pincode": "654545",
+      "phone": "5465454545",
+      "description": "sajdajksdhjk",
+      "id": 2
+    },
+    {
+      "firstName": "hasgdhsg",
+      "lastName": "hgashgdhg",
+      "email": "shabaz@gmail.com",
+      "city": "skjdhajkdh",
+      "pincode": "665654",
+      "phone": "6565456456",
+      "description": "jksahdjksh",
+      "id": 3
+    },
+    {
+      "firstName": "jasdhasg",
+      "lastName": "jhgashdgas",
+      "email": "ajay@gmail.com",
+      "city": "hhagdhgash",
+      "pincode": "545454",
+      "phone": "5454546546",
+      "description": "klasndjkhjkashd",
+      "id": 4
+    },
+    {
+      "firstName": "jasdjh",
+      "lastName": "jhasdhjahk",
+      "email": "azar2@gmail.com",
+      "city": "kjahdkjh",
+      "pincode": "654564",
+      "phone": "5645464654",
+      "description": "65465456456464",
+      "id": 5
+    },
+    {
+      "firstName": "lkjkljklj",
+      "lastName": "kjkjlkj",
+      "email": "azar3@gmail.com",
+      "city": "jakhsdjkshdjk",
+      "pincode": "545645",
+      "phone": "5645446465",
+      "description": "5465454564654",
+      "id": 6
+    }
+  ]
+}

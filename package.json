@@ -1,0 +1,55 @@
+{
+  "name": "demo2",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.6.3",
+    "antd": "^4.12.3",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
+    "concurrently": "^5.3.0",
+    "datatables.net": "^1.10.23",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "json-server": "^0.16.3",
+    "nodemon": "^2.0.7",
+    "popper.js": "^1.16.1",
+    "react": "^17.0.1",
+    "react-bootstrap-table2-paginator": "^2.1.2",
+    "react-dom": "^17.0.1",
+    "react-modal": "^3.12.1",
+    "react-paginate": "^7.0.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.2",
+    "validator": "^13.5.2",
+    "web-vitals": "^1.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "json-server": "json-server --watch db.json --port 3004",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
