@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from 'axios'
 import { Link, useHistory } from "react-router-dom";
 import { data, id, users } from "jquery";
-import validator from "validator";
 
 const AddUser = () => {
     let history = useHistory();
@@ -35,35 +34,20 @@ const AddUser = () => {
 
         let matching = false
 
-        const result = await axios.get("http://localhost:3004/users");
+        // const result = await axios.get("http://localhost:4005/getUsers");
 
-        result.data.map((users) => {
-            if (users.email == user.email) {
+        // result.data.data.map((users) => {
+        //     if (users.email == user.email) {
 
+        //         setMatch(true)
+        //         matching = true
 
+        //     }
 
-
-                // const validateEmail = (e) => {
-                //     var email = e.target.value
-
-                //     if (validator.isEmail(email)) {
-                //         setEmailError('Valid Email :)')
-                //     } else {
-                //         setEmailError('Enter valid Email!')
-                //     }
-                // }
-
-
-                setMatch(true)
-                matching = true
-
-            }
-
-        })
+        // })
 
         if (!matching) {
-
-            await axios.post("http://localhost:3004/users", user);
+            await axios.post("https://users-informations.herokuapp.com/addUser", user);
             history.push("/");
 
 
@@ -172,7 +156,7 @@ const AddUser = () => {
 
                         <input
                             minLength="6"
-                            maxLength="15"
+                            maxLength="50"
                             type="description"
                             className="form-control form-control-lg"
                             placeholder="Enter Description"

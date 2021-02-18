@@ -29,24 +29,25 @@ const EditUser = () => {
     const onSubmit = async e => {
         e.preventDefault();
         let matching = false
-        const result = await axios.get("http://localhost:3004/users");
-        result.data.map((users) => {
+        const result = await axios.get(`http://localhost:4005/getUsers`);
+        result.data.data.map((users) => {
             if (users.email == user.email) {
                 setMatch(true)
                 matching = true
             }
         })
 
+
         if (!matching) {
-            await axios.put(`http://localhost:3004/users/${id}`, user);
+            await axios.put(`http://localhost:4005/updateUserById/${id}`, user);
             history.push("/");
         }
-
     };
 
+
     const loadUser = async () => {
-        const result = await axios.get(`http://localhost:3004/users/${id}`);
-        setUser(result.data);
+        const result = await axios.get(`http://localhost:4005/getUserById/${id}`);
+        setUser(result.data.data);
     };
 
     return (

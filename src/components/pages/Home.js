@@ -18,8 +18,8 @@ const Home = () => {
 
 
     const loadUsers = async () => {
-        const result = await axios.get("http://localhost:3004/users");
-        setUser(result.data);
+        const result = await axios.get("http://localhost:4005/getUsers");
+        setUser(result.data.data);
         if (!$.fn.DataTable.isDataTable('#myTable')) {
             $('#myTable').DataTable({ "pageLength": 5, });
         }
@@ -27,37 +27,19 @@ const Home = () => {
     };
 
 
-
-    // const showModal = (id) => {
-    //     setId(id)
-    //     setIsModalVisible(true);
-    // };
-
-    // const handleOk = () => {
-    //     deleteUser(id)
-    //     setIsModalVisible(false);
-    // };
-
-    // const handleCancel = () => {
-    //     setIsModalVisible(false);
-    // };
-
-
     const deleteUser = async id => {
-        await axios.delete(`http://localhost:3004/users/${id}`);
+        await axios.delete(`http://localhost:4005/removeUserById/${id}`);
         if (!$.fn.DataTable.isDataTable('#myTable')) {
             $('#myTable').DataTable({ "pageLength": 5, });
         }
-
+        await axios.get("http://localhost:4005/getUsers");
         loadUsers();
     };
 
 
     return (
         <>
-            {/* { <Modal id="mdl" title="Warning!" visible={false} onOk={handleOk} onCancel={handleCancel}>
-                <p>Are you sure you want to delete this user?</p>
-            </Modal>} */}
+
             <div className="container">
 
                 <div className="py-4">
@@ -83,16 +65,16 @@ const Home = () => {
                                     <td style={{ textAlign: "center" }} className="textAlign">{user.city}</td>
 
                                     <td style={{ textAlign: "center" }} className="textAlign">
-                                        <Link class="btn btn-primary mr-2" to={`/users/${user.id}`}>
+                                        <Link class="btn btn-primary mr-2" to={`/users/${user._id}`}>
                                             View
                                     </Link>
                                         <Link class="btn btn-outline-primary mr-2"
-                                            to={`/users/edit/${user.id}`}  >
+                                            to={`/users/edit/${user._id}`}  >
                                             Edit
                                     </Link>
                                         <Link
                                             class="btn btn-danger"
-                                            onClick={() => deleteUser(user.id)} >
+                                            onClick={() => deleteUser(user._id)} >
                                             Delete
                                     </Link>
 

@@ -17,8 +17,8 @@ const User = () => {
         loadUser();
     }, []);
     const loadUser = async () => {
-        const res = await axios.get(`http://localhost:3004/users/${id}`);
-        setUser(res.data);
+        const res = await axios.get(`http://localhost:4005/getUserById/${id}`);
+        setUser(res.data.data);
     };
     return (
         <div className="container py-4 ">
