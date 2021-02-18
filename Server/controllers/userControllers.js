@@ -1,7 +1,6 @@
 const User = require('../models/user');
 
 createUser = (req, res) => {
-    debugger
 
     const body = req.body
 
